@@ -9,6 +9,7 @@ lazy val judgelscommons = (project in file("."))
         libraryDependencies ++= Seq(
             "com.google.code.gson" % "gson" % "2.3.1",
             "com.google.guava" % "guava" % "r05",
+            "com.puppycrawl.tools" % "checkstyle" % "6.1",
             "commons-io" % "commons-io" % "2.4",
             "org.apache.httpcomponents" % "httpclient" % "4.5",
             "org.apache.commons" % "commons-lang3" % "3.3.2",
