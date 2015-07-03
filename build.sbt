@@ -5,10 +5,10 @@ lazy val judgelscommons = (project in file("."))
     .settings(
         name := "judgelscommons",
         version := IO.read(file("version.properties")).trim,
-        scalaVersion := "2.11.1",
+        scalaVersion := "2.11.7",
         libraryDependencies ++= Seq(
             "com.google.code.gson" % "gson" % "2.3.1",
-            "com.google.guava" % "guava" % "r05",
+            "com.google.guava" % "guava" % "18.0",
             "com.puppycrawl.tools" % "checkstyle" % "6.1",
             "commons-io" % "commons-io" % "2.4",
             "org.apache.httpcomponents" % "httpclient" % "4.5",
