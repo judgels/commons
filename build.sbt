@@ -17,7 +17,8 @@ lazy val judgelscommons = (project in file("."))
             "org.powermock" % "powermock-module-testng" % "1.6.2",
             "org.eclipse.jgit" % "org.eclipse.jgit" % "3.7.0.201502260915-r",
             "com.amazonaws" % "aws-java-sdk" % "1.9.28.1" exclude("joda-time", "joda-time")
-        )
+        ),
+        resolvers += Resolver.sbtPluginRepo("releases")
     )
     .settings(TestNGPlugin.testNGSettings: _*)
     .settings(
@@ -32,3 +33,6 @@ lazy val judgelscommons = (project in file("."))
         publishArtifact in packageDoc := false,
         sources in (Compile,doc) := Seq.empty
     )
+
+
+fork in run := true
