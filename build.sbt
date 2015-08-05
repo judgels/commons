@@ -3,7 +3,7 @@ import de.johoop.jacoco4sbt.JacocoPlugin.jacoco
 
 lazy val judgelscommons = (project in file("."))
     .settings(
-        name := "judgelscommons",
+        name := "commons",
         version := IO.read(file("version.properties")).trim,
         scalaVersion := "2.11.7",
         libraryDependencies ++= Seq(
