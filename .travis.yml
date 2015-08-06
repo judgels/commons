@@ -3,5 +3,10 @@ language: java
 jdk:
   - oraclejdk8
 
+install:
+  - git clone https://github.com/judgels/judgels.git ../judgels
+
 script:
-  - ./activator test
+  - ../judgels/scripts/download-activator.sh
+  - export PATH=$PATH:~/activator
+  - activator test
