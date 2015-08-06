@@ -1,7 +1,7 @@
 import de.johoop.testngplugin.TestNGPlugin
 import de.johoop.jacoco4sbt.JacocoPlugin.jacoco
 
-lazy val judgelscommons = (project in file("."))
+lazy val commons = (project in file("."))
     .settings(
         name := "commons",
         version := IO.read(file("version.properties")).trim,
