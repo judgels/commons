@@ -1,6 +1,15 @@
 import de.johoop.testngplugin.TestNGPlugin
 import de.johoop.jacoco4sbt.JacocoPlugin.jacoco
 
+val checkstyle = taskKey[Unit]("Execute checkstyle")
+
+checkstyle := {
+    val v = ("../judgels/scripts/execute-checkstyle.sh" !)
+    if (v != 0) {
+        sys.error("Failed")
+    }
+}
+
 lazy val commons = (project in file("."))
     .settings(
         name := "commons",
