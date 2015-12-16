@@ -18,6 +18,7 @@ lazy val commons = (project in file("."))
         libraryDependencies ++= Seq(
             "com.google.code.gson" % "gson" % "2.3.1",
             "com.google.guava" % "guava" % "18.0",
+            "com.typesafe" % "config" % "1.3.0",
             "com.puppycrawl.tools" % "checkstyle" % "6.8.1",
             "commons-io" % "commons-io" % "2.4",
             "org.apache.httpcomponents" % "httpclient" % "4.5",
