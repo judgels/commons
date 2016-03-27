@@ -16,3 +16,7 @@ dist
 projectFilesBackup/
 src/main/resources/conf/*.conf
 !src/main/resources/conf/*_default.conf
+build/*
+.gradle
+*.ipr
+*.iws
