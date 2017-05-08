@@ -1,7 +1,7 @@
 package org.iatoki.judgels;
 
-import java.util.HashMap;
 import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
 
 public final class LRUCache<K, V> {
 
@@ -16,7 +16,11 @@ public final class LRUCache<K, V> {
         this.currentSize = 0;
         this.leastRecentlyUsed = new Node<>(null, null, null, null);
         this.mostRecentlyUsed = leastRecentlyUsed;
-        this.cache = new HashMap<>();
+        this.cache = new ConcurrentHashMap<>();
+    }
+
+    public boolean contains(K key) {
+        return cache.containsKey(key);
     }
 
     public V get(K key) {
